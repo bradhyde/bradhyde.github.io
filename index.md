@@ -31,6 +31,9 @@
 			margin-bottom: 	1.5rem;
 
 		}	
+		h2{
+				font-size: 	1.125em;
+			}		
 		p{
 			font-family: 'Merriweather', serif;
 			margin-bottom: 	0 0 1.5rem 0;
@@ -57,7 +60,10 @@
 <div class="intro">	
 <h1>I'm Brad Hyde</h1>
 <p>I'm an <strong>Edmonton, AB</strong> based <strong>web designer</strong>, <strong>developer</strong> and <strong>graphic designer</strong>.</p>
-<p><a href="mailto:bradh@bradhydedesigns.com"><i class="material-icons" style="font-size:32px;">&#xE0E1;</i></a></p>
+<p>
+<h2>Hire me!</h2>
+<a href="mailto:bradh@bradhydedesigns.com"><i class="material-icons" style="font-size:32px;">&#xE0E1;</i></a>
+</p>
 </div>
 
 

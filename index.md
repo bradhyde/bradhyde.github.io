@@ -62,7 +62,7 @@
 <p>I'm an <strong>Edmonton, AB</strong> based <strong>web designer</strong>, <strong>developer</strong> and <strong>graphic designer</strong>.</p>
 <p>
 <h2>Hire me!</h2>
-<a href="mailto:bradh@bradhydedesigns.com"><i class="material-icons" style="font-size:32px;">&#xE0E1;</i></a>
+<a href="mailto:bradh@bradhydedesigns.com" title="Hire me!"><i class="material-icons" style="font-size:32px;">&#xE0E1;</i></a>
 </p>
 </div>
 

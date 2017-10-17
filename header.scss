@@ -4,9 +4,13 @@ HEADER STYLES
 
 *******************************/
 header{
-  background-color: #009CDC;
-  color: #C4E9FB;
+  background-color: $primary_brand;
+  color: $light_ui;
   padding-bottom: 3px;
+}
+
+header a{
+  color: $light_ui; 
 }
 
 .header-utilities__list{
@@ -26,23 +30,23 @@ header{
   position: relative; }
 
 .header-search__input {
-  background-color: #009CDC;
+  background-color: $primary_brand;
   border: none;
   width: 100%;
   padding: 3px 10px; 
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;}
+  color: $font_light;
+  border-bottom: 2px solid $font_light;}
 
 .header-search__input::placeholder{
-  color: #ffffff;
+  color: $font_light;
 } 
 
 .header-search__input:focus {
   outline: none; }
 
 .header-search__btn {
-  background-color: #009CDC;
-  color: #ffffff;
+  background-color: $primary_brand;
+  color: $font_light;
   border: none;
   position: absolute;
   top: 0;

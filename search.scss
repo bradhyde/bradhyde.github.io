@@ -1,0 +1,28 @@
+.main-search{
+	background: $dark_ui;
+	padding: 3rem 0;
+}
+
+.main-search__container{
+	margin-bottom: 0;
+}
+
+.main-search__input{
+	border-radius: 0;
+	border: none;
+	background: $med_ui;
+	color: #C4E9FB;
+	padding: 15px;
+	font-size: 1em;
+	height: auto;
+}
+
+.main-search__btn{
+	background: #00587a;
+	color: $light_ui;
+	border-radius: 0;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	font-size: 1em;
+}

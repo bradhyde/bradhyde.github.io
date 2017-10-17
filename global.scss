@@ -1,0 +1,135 @@
+/*******************************
+
+GLOBAL STYLES
+
+*******************************/
+$primary_brand: #009CDC;
+
+$nav_bg: #0D7CBF;
+$light_ui: #C4E9FB;
+$med_ui: #00587A;
+$dark_ui: #002C3D;
+
+$font_dark: #45494F;
+$font_med: #999999;
+$font_light: #ffffff;
+
+$light_bg: #ffffff;
+$med_bg: #F2F3F7;
+
+$alert_colour: #D62839;
+
+
+
+html,body{
+  height: 100%;
+}
+body{
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "proxima-nova",sans-serif;
+  height: 100%;
+  color: $font_dark;
+  position: relative;
+}
+
+p,ul,ol,dl,figure,table,blockquote,hr{
+  margin: 0 0 1.5rem 0;
+}
+
+p{
+  
+}
+h2,h3,h4,h5,h6{
+  margin-top: 3rem;
+  color: #46474a;
+  font-weight: 500;
+}
+h1{
+  color: #333333;
+  font-size: 1.802em;
+  line-height: 1.665;
+  margin: 0 0 3.5rem 0;
+
+}
+h2{
+  font-size: 1.602em;
+  line-height: 1.873;
+}
+h3{
+  font-size: 1.424em;
+  line-height: 1.053;
+}
+h4{
+  font-size: 1.266em;
+  line-height: 1.185;
+}
+h5{
+  font-size: 1.125em;
+  line-height: 1.333;
+}
+h6{
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+a{
+    color: #009cdc;
+}
+
+p a{
+  border-bottom: 2px solid #EAEBED;
+  transition: all .15s ease-in-out;
+}
+
+p a:hover{
+  color: #009cdc;
+  text-decoration: none;
+  background-color: #EAEBED;
+}
+
+.type--xlarge{
+  font-size: 3.353em;
+  line-height: 1.142em;
+  margin-bottom: 1.5rem;
+}
+.type--large{
+  font-size: 2.566em;
+  line-height: 1.169;
+}
+.type--med{
+  font-size: 1.266em;
+  line-height: 1.184;
+}
+.type--small{
+  font-size: 0.889em;
+}
+.type--xsmall{
+  font-size: 0.818em;
+}
+
+.content__icon{
+  color: teal;
+}
+
+.social-icon--facebook{
+  color: #3b5999;
+}
+
+.social-icon--twitter{
+  color: #55acee;
+}
+
+.social-icon--instagram{
+  color: #e4405f;
+}
+
+.social-icon--youtube{
+  color: #cd201f;
+}
+
+.social-icon--linkedin{
+  color: #0077B5;
+}
+

@@ -3,61 +3,67 @@
 POP TOPICS WIDGET STYLES
 
 *******************************/
-.pop-topics{
-	background-color: $med_bg;
-	position: relative;
-  margin-bottom: 6rem;
-}
+.pop-topics {
+  background-color: #F2F3F7;
+  position: relative;
+  margin-bottom: 6rem; }
 
-.pop-topics__item{
-  padding: 2rem 0;
+.pop-topics__item {
+  padding: 4rem 0;
   text-align: center;
   position: relative;
-}
+  overflow: hidden; }
 
-.pop-topics__item:before {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: red;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%,-50%);
-    z-index: 100;
-    // transform: scale(0);
-    transition: all .15s ease-in-out;
-}
+.pop-topics__item:after {
+  content: '';
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  background-color: #009CDC;
+  z-index: 0;
+  border-radius: 50%;
+  -webkit-transition: all .45s ease-in-out;
+  -o-transition: all .45s ease-in-out;
+  transition: all .45s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(0);}
 
-.pop-topics__link{
+  .pop-topics__item:hover:after{
+    transform: translate(-50%, -60%) scale(5);
+  }
+
+  .pop-topics__item:hover span,   .pop-topics__item:hover i{
+    color: #ffffff;
+  }
+
+.pop-topics__link {
   display: block;
   height: 100%;
   text-align: center;
   text-decoration: none;
   position: relative;
-  z-index: 3;
-}
+  z-index: 3; }
 
-.pop-topics__link:hover{
-  text-decoration: none;
-}
+.pop-topics__link:hover {
+  text-decoration: none; }
 
-.pop-topics__icon{
+.pop-topics__icon {
   display: block;
   font-size: 1.75em;
   position: relative;
-  color: $primary_brand;
+  color: #009CDC;
   z-index: 10;
   margin-bottom: 1rem;
-}
+  transition: all .15s ease-in-out;
+  transition-delay: .15s }
 
+.pop-topics__title {
+  color: #45494F;
+  transition: all .15s ease-in-out;
+  transition-delay: .15s }
 
-
-// .pop-topics__link:hover .pop-topics__item:before{
-//     transform: scale(5);
-// }
-
-
-.pop-topics__title{
-	color: #45494F;
+.pop-topics__item:hover .pop-topics__title,   .pop-topics__item:hover .pop-topics__icon{
+  color: #ffffff;
 }

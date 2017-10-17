@@ -97,8 +97,8 @@ MAIN PROMO WIDGET STYLES
   .main-promo__caption {
     font-size: 2.5em; }
   .main-promo__img {
-    -webkit-animation: zoomin 60s infinite;
-    animation: zoomin 60s infinite; }
+    -webkit-animation: zoomin 250s infinite;
+    animation: zoomin 250s infinite; }
   @-webkit-keyframes zoomin {
     0% {
       -webkit-transform: scale(1); }

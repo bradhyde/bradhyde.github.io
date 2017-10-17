@@ -79,6 +79,13 @@ NAV STYLES
   color: #ffffff;
 }
 
+input.nav-search--desktop__input {
+    background: none;
+    border: none;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
 .nav-search--mobile {
     padding: 1.5rem 10px;
     background-color: #005a7a;

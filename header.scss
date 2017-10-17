@@ -3,45 +3,60 @@
 HEADER STYLES
 
 *******************************/
-.cosg-logo {
-  height: 80px;
-  width: auto;
-  padding: 15px 0;
+header{
+  background-color: #009CDC;
+  color: #C4E9FB;
+  padding-bottom: 3px;
 }
 
-.header-search{
-  padding: 2.25rem 0;
+.header-utilities__list{
+  padding-top: 15px;
+  margin-bottom: 0;
 }
+
+.header-utilities__list--social-icon{
+  position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 15%);
+}
+
+.header-search {
+  margin: 0;
+  position: relative; }
+
 .header-search__input {
-  background-color: #e6e7e8;
+  background-color: #009CDC;
   border: none;
   width: 100%;
-  padding: 5px 10px;
-}
+  padding: 3px 10px; 
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;}
+
+.header-search__input::placeholder{
+  color: #ffffff;
+} 
+
 .header-search__input:focus {
-  outline: none;
-}
+  outline: none; }
 
 .header-search__btn {
-  background-color: #e6e7e8;
+  background-color: #009CDC;
+  color: #ffffff;
   border: none;
   position: absolute;
-  top: 2.25rem;
-  right: 1.3125em;
-  padding: 5px 10px;
-  outline: none;
-}
-.header-contact{
-  padding: 2.85rem;
-}
+  top: 0;
+  right: 0;
+  padding: 3px 10px;
+  outline: none; }
 
-@media (min-width: 320px){
-	.desktop-header{
-		display: none;
-	}
-}
-@media (min-width: 767px){
-	.desktop-header{
-		display: block;
-	}
-}
+.header-contact {
+  padding: 2.85rem; }
+
+@media (min-width: 320px) {
+  .desktop-header {
+    display: none; } }
+
+@media (min-width: 767px) {
+  .desktop-header {
+    display: block; } }

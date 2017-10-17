@@ -1,0 +1,14 @@
+.alert--warning{
+  background-color: $alert_colour;
+  color: $font_light;
+  padding: 2rem;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.alert--notice{
+  background-color:$primary_brand;
+  color: $font_light;
+  padding: 2rem;
+  border-radius: 0;
+}

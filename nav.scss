@@ -3,73 +3,156 @@
 NAV STYLES
 
 *******************************/
-.cosg__logo{
-	padding: 1em 0;
+.nav-logo {
+  height: 75px;
+  padding: 15px 0 15px 0;
+  width: auto; }
+
+.cosg__nav {
+  background: #009CDC;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none; 
+  position: relative;
+  z-index: 5000;
 }
 
-.mobile-logo{
-    height: 70px;
-    padding: 15px 0;
-    width: auto;
+.cosg__nav .navbar-nav > li > a {
+  color: #ffffff;
+  font-size: 1.25em;
+  padding: 10px 25px 0 0;
+  font-weight: 400;
+  position: static;
+   }
+
+.cosg__nav .navbar-nav > li > a:hover {
+  color: #ffffff; }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  background-color: #009CDC;
+  color: #002C3D; }
+
+.nav > li {
+  position: static; }
+
+.dropdown .megamenu-sub {
+  position: absolute;
+  z-index: 2;
+  min-width: initial;
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background-color: #00587A; 
+  padding: 30px 0;
+  box-shadow: inset 0 2px 10px #002C3D;
+  transition: all .35s ease-in-out;
 }
 
-.cosg__nav{
-	background: $primary_brand;
-	margin-bottom: 0;
-	border-radius: 0;
-	border:none;
-}
-
-.cosg__nav .navbar-nav>li>a{
-	color: $font_light;
-	font-size: 1.5em;
-	padding: 20px 20px 20px 20px;
-	font-weight: 400;
-	position: static;
-}
-
-.cosg__nav .navbar-nav>li>a:hover{
-	background-color: $med_ui;
-	color: $font_light;
-}
-
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
-	background-color: $med_ui;
-	color: $font_light;
-}
-
-.nav>li{
-	position: static;
-}
-
-.megamenu-sub{
-	min-width: initial;
-	width: 100%;
-	box-shadow: none;
-	border: none;
-	background-color: $med_ui;
-}
-
-
-.list-group-item.nav__item{
-	background-color: inherit;
-	color:$font_light;
-	border-radius: 0;
-	border: none;
-}
-
-.list-group-item__heading{
-	font-weight: bold;
-	border-bottom: 1px solid #ffffff;
-}
-
-.mobile-logo{
-	padding: 1rem 0;
+.nav-subgroup{
+  border-left: 2px solid #002d3e;
+  margin-bottom: 45px;
 }
 
 
-@media (max-width: 767px){
-	.navbar-nav .open .dropdown-menu.megamenu-sub {
-	    background-color: $med_ui;
-	}
+.list-group-item.nav__item {
+  background-color: inherit;
+  color: #ffffff;
+  border-radius: 0;
+  padding: 0 15px 5px 15px;
+  border: none; }
+
+  .list-group-item.nav__item:hover{
+    color: #ffffff;
+    background: none;
+    text-decoration: underline;
+  }
+
+.list-group-item__heading {
+  font-weight: 300;
+  font-size: 1.75em;
+  margin-bottom: 1.5rem;
+}
+
+.nav-search--desktop{
+  padding-top: 8px;
+  color: #ffffff;
+}
+
+.nav-search--mobile {
+    padding: 1.5rem 10px;
+    background-color: #005a7a;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+.nav-search--mobile__form{
+  position: relative;
+}
+
+.nav-search--mobile__input{
+  background-color: #f2f3f7;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  color: #005a7a;
+}
+
+.nav-search--mobile__btn{
+  background-color: #f2f3f7;
+  color: #005a7a;
+  border:none;
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  right: 0;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border-color: #00587A;
+}
+
+@media (max-width: 992px) {
+  .cosg__nav .navbar-nav>li>a {
+      font-size: 1em;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu.megamenu-sub {
+    background-color: #00587A;
+    box-shadow: inset 0 2px 10px #002d3e;
+  } 
+    
+    .cosg__nav .navbar-nav>li>a {
+        font-size: 1.25em;
+        padding: 20px 10px 10px 10px
+    }
+
+    .nav-logo {
+        height: 70px;
+        padding: 15px 0 15px 0;
+        width: auto;
+    }
+
+    .cosg-nav--toggle{
+      border:none;
+      color: #ffffff;
+      font-size: 2.5rem;
+      padding: 5px 8px;
+      margin-top: 15px;
+      border-radius: 0;
+    }
+
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: #00587A;
+
+    }
+    .navbar-header{
+      box-shadow: 0 2px 10px #002d3e;
+      z-index: 500;
+      position: relative;
+    }
+
 }

@@ -1,0 +1,42 @@
+.cosg-logo {
+  height: 80px;
+  width: auto;
+  padding: 15px 0;
+}
+
+.header-search{
+  padding: 2.25rem 0;
+}
+.header-search__input {
+  background-color: #e6e7e8;
+  border: none;
+  width: 100%;
+  padding: 5px 10px;
+}
+.header-search__input:focus {
+  outline: none;
+}
+
+.header-search__btn {
+  background-color: #e6e7e8;
+  border: none;
+  position: absolute;
+  top: 2.25rem;
+  right: 1.3125em;
+  padding: 5px 10px;
+  outline: none;
+}
+.header-contact{
+  padding: 2.85rem;
+}
+
+@media (min-width: 320px){
+	.desktop-header{
+		display: none;
+	}
+}
+@media (min-width: 767px){
+	.desktop-header{
+		display: block;
+	}
+}

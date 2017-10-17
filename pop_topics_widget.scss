@@ -1,0 +1,58 @@
+.pop-topics{
+	background-color: $med_bg;
+	position: relative;
+  margin-bottom: 6rem;
+}
+
+.pop-topics__item{
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.pop-topics__item:before {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: red;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    z-index: 100;
+    // transform: scale(0);
+    transition: all .15s ease-in-out;
+}
+
+.pop-topics__link{
+  display: block;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 3;
+}
+
+.pop-topics__link:hover{
+  text-decoration: none;
+}
+
+.pop-topics__icon{
+  display: block;
+  font-size: 1.75em;
+  position: relative;
+  color: $primary_brand;
+  z-index: 10;
+  margin-bottom: 1rem;
+}
+
+
+
+// .pop-topics__link:hover .pop-topics__item:before{
+//     transform: scale(5);
+// }
+
+
+.pop-topics__title{
+	color: #45494F;
+}

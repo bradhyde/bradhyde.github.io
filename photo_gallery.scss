@@ -1,0 +1,17 @@
+/************************************
+
+PHOTO GALLERY SECTION
+
+************************************/
+
+.gallery-thumb{
+  	opacity: 0;
+  	transform: translateY(15%);
+  	transition: all .15s ease-in-out;
+}
+
+
+.thumbnail-fade-in{
+	transform: translateY(0);
+	opacity: 1;
+}

@@ -1,0 +1,70 @@
+.cosg__logo{
+	padding: 1em 0;
+}
+
+.mobile-logo{
+    height: 70px;
+    padding: 15px 0;
+    width: auto;
+}
+
+.cosg__nav{
+	background: $primary_brand;
+	margin-bottom: 0;
+	border-radius: 0;
+	border:none;
+}
+
+.cosg__nav .navbar-nav>li>a{
+	color: $font_light;
+	font-size: 1.5em;
+	padding: 20px 20px 20px 20px;
+	font-weight: 400;
+	position: static;
+}
+
+.cosg__nav .navbar-nav>li>a:hover{
+	background-color: $med_ui;
+	color: $font_light;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: $med_ui;
+	color: $font_light;
+}
+
+.nav>li{
+	position: static;
+}
+
+.megamenu-sub{
+	min-width: initial;
+	width: 100%;
+	box-shadow: none;
+	border: none;
+	background-color: $med_ui;
+}
+
+
+.list-group-item.nav__item{
+	background-color: inherit;
+	color:$font_light;
+	border-radius: 0;
+	border: none;
+}
+
+.list-group-item__heading{
+	font-weight: bold;
+	border-bottom: 1px solid #ffffff;
+}
+
+.mobile-logo{
+	padding: 1rem 0;
+}
+
+
+@media (max-width: 767px){
+	.navbar-nav .open .dropdown-menu.megamenu-sub {
+	    background-color: $med_ui;
+	}
+}

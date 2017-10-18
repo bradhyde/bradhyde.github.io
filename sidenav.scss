@@ -1,0 +1,71 @@
+
+
+ #myScrollspy{
+ 	margin-top: 1.5rem;
+ }
+
+  .sidenav{
+  	padding: 0;
+  	margin: 0;
+  	width: 210px;
+  	padding-right: 15px;
+  	position: relative;
+  	/*border-right: 1px solid #cccccc;*/
+
+  }
+  .sidenav li{
+  	list-style-type: none;
+  	margin-bottom: 1.5rem;
+  }
+
+  .sidenav li a {
+      display: inline-block;
+      padding: 4px 0 0 10px;
+      width: 90%;
+  }
+
+  .expand-subnav-btn {
+  	padding: 2px 5px;
+  	opacity: .5;
+  	cursor: pointer;
+  	-webkit-transition: all .5s ease-in-out;
+  	-moz-transition: all .5s ease-in-out;
+  	-o-transition: all .5s ease-in-out;
+  	transition: all .5s ease-in-out;
+  }
+
+  .close-subnav-btn{
+  	transform: rotate(-540deg);
+  }
+
+  .active{
+  	font-weight: bold;
+  	border-left: 4px solid $med_ui;
+  }
+
+  .subnav{
+  	margin: 1.5rem 0 0 15px;
+  	padding: 0;
+  }
+
+  .subnav-hidden{
+  	max-height: 0;
+  	overflow: hidden;
+  	-webkit-transition: all .25s ease-in-out;
+  	  -moz-transition: all .25s ease-in-out;
+  	  -o-transition: all .25s ease-in-out;
+  	  transition: all .25s ease-in-out;
+  }
+
+  .subnav-visible{
+  	max-height: 300px;
+  	-webkit-transition: all .25s ease-in-out;
+  	  -moz-transition: all .25s ease-in-out;
+  	  -o-transition: all .25s ease-in-out;
+  	  transition: all .25s ease-in-out;
+  }
+
+  .affix {
+  	  position: fixed;
+      top: 20px;
+  }

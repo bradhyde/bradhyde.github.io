@@ -1,0 +1,83 @@
+
+ .main-content{
+  margin-top: 3rem;
+ }
+
+/************************************
+
+ARTICLE SECTION
+
+************************************/
+
+article {
+
+  header{
+ 	  margin-bottom: 3rem;
+
+    .article__heading{
+        font-weight: 300;
+    }
+
+    .timestamp{
+      width: 100%;
+      color: #999999;
+      font-style: italic;
+      
+    }
+
+  }
+
+}
+ 
+/************************************
+
+CHILD PAGE LIST SECTION
+
+************************************/
+
+.child-page-panel{
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid #cccccc;
+  margin-top: 3rem;
+}
+
+.child-page-panel .caption{
+  padding: 0;
+}
+
+.caption-heading{
+  margin-top: 1.5rem;
+}
+
+
+/************************************
+
+FILE PANEL CSS
+
+************************************/
+
+.file-panel{
+  border: none;
+  border-radius: 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.file-panel-icon{
+  font-size: 2em;
+  color: #44b1ac;
+}
+
+.child-page-panel .caption{
+  padding: 0;
+}
+
+.caption-heading{
+  margin-top: 1.5rem;
+}
+
+
+
+
+

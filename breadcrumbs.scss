@@ -6,5 +6,9 @@
 .breadcrumb--mod{
 	background: none;
 	margin-bottom: 0;
+	color: $font_light;
+}
+
+.breadcrumb--mod .breadcrumb-item a{
 	color: $light_ui;
 }

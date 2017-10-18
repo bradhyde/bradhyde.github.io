@@ -171,7 +171,7 @@ NAV STYLES
 
 .nav-search--mobile {
   padding: 1.5rem 10px;
-  background-color: #C4E9FB;
+  background-color: $med_ui;
   margin-top: -8px;
   margin-bottom: 15px;
 }
@@ -181,15 +181,15 @@ NAV STYLES
 }
 
 .nav-search--mobile__input {
-  background-color: #F2F3F7;
+  background-color: $med_bg;
   width: 100%;
   border: none;
   padding: 5px;
-  color: #00587A;
+  color: $med_ui;
 }
 
 .nav-search--mobile__btn {
-  background-color: #F2F3F7;
+  background-color: $med_bg;
   color: #00587A;
   border: none;
   position: absolute;
@@ -199,7 +199,7 @@ NAV STYLES
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: #00587A;
+  border-color: $med_ui;
 }
 @media (max-width: 1200px) {
 .nav-search--tablet.active{

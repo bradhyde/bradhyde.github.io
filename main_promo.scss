@@ -27,7 +27,7 @@ MAIN PROMO WIDGET STYLES
 .main-promo__overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .35);
+  background-color: rgba(0, 0, 0, .4);
   position: absolute;
   top: 0;
   left: 0;
@@ -45,9 +45,8 @@ MAIN PROMO WIDGET STYLES
 .main-promo__caption {
   display: block;
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 300;
   margin-bottom: 3rem;
-  text-shadow: 0 1px 0px black;
   transform: translateY(50%); 
   opacity: 0;
   transition: all .35s ease-in-out;}

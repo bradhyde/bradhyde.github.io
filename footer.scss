@@ -3,15 +3,26 @@
 FOOTER STYLES
 
 *******************************/
-footer{
-	background-color: $med_bg;
+footer {
+  background-color: #F2F3F7;
 }
 
-footer .fa{
-	margin-right: 10px;
+footer .fa {
+  margin-right: 10px;
 }
 
-footer ul li{
-	margin-bottom: 1.5rem;
+footer ul li {
+  margin-bottom: 1.5rem;
 }
 
+.footer-copy{
+  margin-top: 4.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-copy__img{
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 1px 2px black;
+
+}

@@ -69,9 +69,15 @@ NAV STYLES
   }
 
 .list-group-item__heading {
+  color: #c4e9fb;
   font-weight: 300;
   font-size: 1.75em;
   margin-bottom: 1.5rem;
+}
+
+.list-group-item.list-group-item__heading:hover{
+  text-decoration: none;
+  color: #c4e9fb;
 }
 
 .nav-search--desktop{

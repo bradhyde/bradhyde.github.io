@@ -1,0 +1,120 @@
+.sidenav{
+  	padding: 0;
+  	margin: 0;
+  	padding-right: 15px;
+  	position: relative;
+    font-size: 2.566em;
+    line-height: 1.169;
+  }
+
+  .sidenav li{
+  	list-style-type: none;
+  	margin-bottom: 1.5rem;
+  }
+
+  .sidenav li a {
+      display: inline-block;
+      padding: 4px 0 0 10px;
+      width: 90%;
+  }
+
+
+  .affix {
+  	  position: fixed;
+      top: 20px;
+  }
+
+.article{
+    margin-bottom: 3rem;
+    min-height: 500px;
+}
+  .news__heading{
+    margin: 3rem 0;
+  	font-weight: 700;
+  }
+
+  .news-hero{
+    margin-bottom: 3rem;
+  }
+
+  .news-hero--img{
+    margin-bottom: 1.5rem;
+  }
+
+  .news-hero figcaption{
+    font-style: italic;
+    color: #8a9299;
+  }
+
+  .news-timestamp{
+    display: inline-block;
+  	width: 100%;
+    border-bottom: 2px solid #cccccc;
+    margin-bottom: 1.5rem;
+  	
+  }
+
+  blockquote{
+  margin: 3rem 1.5rem;
+  border-left: 8px solid #3DCCC7;
+  overflow: hidden;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.blockquote-container{
+  overflow: hidden;
+}
+
+.blockquote-animate blockquote{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  blockquote > p{
+    font-size: 1.266em;
+    line-height: 1.184;
+    font-style: italic;
+    transform: translateX(-110%);
+    transition: all 1s ease-in-out;
+  }
+
+  blockquote > footer{
+    transform: translateX(-110%);
+    transition: all 1s ease-in-out;
+  }
+
+  .blockquote-animate blockquote > footer{
+    -webkit-transition-delay: .35s; /* Safari */
+        transition-delay: .35s;
+    transform: translateX(0);
+  }
+
+  .blockquote-animate blockquote > p{
+    -webkit-transition-delay: .35s; /* Safari */
+        transition-delay: .35s;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .thumbnail{
+      opacity: 0;
+      transform: translateY(15%);
+      transition: all .15s ease-in-out;
+    }
+
+
+    .thumbnail-fade-in{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+  .related-links .list-group-item{
+  	border:none;
+  }
+
+  .video-embed{
+    margin: 3rem 0;
+  }
+

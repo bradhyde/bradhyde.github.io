@@ -133,3 +133,8 @@ p a:hover{
   color: #0077B5;
 }
 
+@media (max-width: 480px) {
+  body{
+    font-size: 12px;
+  }
+}

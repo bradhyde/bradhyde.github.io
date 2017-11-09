@@ -1,0 +1,39 @@
+/*******************************
+
+FORM STYLES
+
+*******************************/
+.umbraco-forms-form{
+	margin-bottom: 5em;
+}
+.umbraco-forms-field {
+    margin-bottom: 1.5em;
+}
+
+.umbraco-forms-form input.text, .umbraco-forms-form input.title, .umbraco-forms-form textarea, .umbraco-forms-form select{
+	margin: 0 0 5px 0;
+	padding: 5px;
+	width: 95%;
+}
+
+.input-validation-error{
+	background-color: rgba(214, 41, 59, .25);
+	border: 1px solid #d6293b;
+}
+
+.field-validation-error{
+	display: block;
+	color: #D6283A;
+}
+.field-validation-error:before{
+	font-family: FontAwesome;
+    content: "\f06a";
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.umbraco-forms-navigation input{
+	background-color: #009CDC;
+	color: #ffffff;
+}

@@ -29,6 +29,34 @@ article {
   }
 
 }
+
+/************************************
+
+COUNCIL PROFILE SECTION
+
+************************************/
+
+.council-member{
+margin-bottom: 1.5em;
+box-shadow: 0 1px 3px #a2a8b3;
+padding: 15px;
+}
+.council-profilePic{
+margin-bottom: 10px;
+	  box-shadow: 0 1px 2px black;
+}
+.council-name{
+  font-size: 1.75em;
+  font-weight: 300;
+}
+.council-history, .council-resident, .council-name{
+margin-bottom: 1.5rem;
+}
+.council-profilePanel{
+	margin-top: 1.5rem;
+	box-shadow: none;
+}
+
  
 /************************************
 

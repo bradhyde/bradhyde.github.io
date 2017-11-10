@@ -57,6 +57,55 @@ margin-bottom: 1.5rem;
 	box-shadow: none;
 }
 
+/************************************
+
+SNOW REMOVAL SECTION
+
+************************************/
+.snow-route{
+	padding:0;
+}
+
+.snow-routes .panel{
+	margin-bottom: 10px;
+}
+
+.snow-route__icon{
+	color: #CFD8DC;
+}
+.snow-route__addr--route{
+	font-style: italic;
+}
+
+.snow-route__status {
+    padding:17px;
+    text-align: center;
+border-left: 1px solid #cccccc;
+	background: #CFD8DC;
+}
+
+.snow-route__status--active{
+	padding: 17px;
+	text-align: center;
+    background: #FFEB3B;
+    font-weight: bold;
+}
+
+.snow-route__icon{
+    padding: 5px 15px;
+}
+.snow-route__addr{
+    padding: 5px 15px;
+}
+
+@media(max-width: 480px){
+	.snow-route__status, .snow-route__status--active {
+		padding:10px;
+	}
+
+}
+
+
  
 /************************************
 

@@ -57,16 +57,17 @@ NAV STYLES
 
 .list-group-item.nav__item {
   background-color: inherit;
-  color: $font_light;
+  color: #ffffff;
   border-radius: 0;
   padding: 0 15px 5px 15px;
-  border: none; }
+  border: none;
+}
 
-  .list-group-item.nav__item:hover{
-    color: $font_light;
-    background: none;
-    text-decoration: underline;
-  }
+.list-group-item.nav__item:hover {
+  color: #c4e9fb;
+  background: none;
+  text-decoration: underline;
+}
 
 .list-group-item__heading {
   color: #c4e9fb;
@@ -75,9 +76,9 @@ NAV STYLES
   margin-bottom: 1.5rem;
 }
 
-.list-group-item.list-group-item__heading:hover{
+.list-group .list-group-item.list-group-item__heading:hover {
   text-decoration: none;
-  color: #c4e9fb;
+  color: #ffffff;
 }
 
 .nav-search--desktop{

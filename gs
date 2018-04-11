@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Garage Sale List</title>
 	<script src="https://use.typekit.net/enl4roo.js"></script>
 	<script>try { Typekit.load({ async: true }); } catch (e) { }</script>
@@ -20,6 +20,43 @@
 		 i{font-size: 120%;}
 	 		 #map-panel { width: 1224px; height: 792px; margin: 15px 5px 0 5px; position: relative; overflow: hidden;}
 	   		 #map-canvas { width: 100%; height: 40vh; }
+
+	   		#map-list{
+	   			height: 35vh;
+	   			
+	   			
+	   			position: relative;
+	   			z-index: 500;
+	   		}
+
+	   		.garage-sale-entry{
+	   			padding: 20px;
+	   			border-bottom: 1px solid #ddd;
+	   		}
+	   		@media (max-width: 768px){
+	   			body{
+	   				overflow-x: hidden;
+	   			}
+	   			#map-list{
+	   				--n: 1;
+	   				width: 100%;
+	   				width: calc(var(--n)*110%);
+	   				display: flex;
+	   				align-items: center;
+	   				height: 45vh;
+
+	   				transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+	   			}
+
+	   			.garage-sale-entry{
+	   				width: 100%;
+	   				width: calc(110%/var(--n));
+	   				user-select: none;
+	   				pointer-events: none;
+	   			}
+	   				
+	   		}
+	   			} 
     </style>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrh3E6beCX6O4Z1ZxFc9Ln2fUZir3vC0"></script>
@@ -163,44 +200,7 @@
 		<div class="col-md-9 col-md-offset-3 row">
 			<h1>Garage sales</h1>
 			<div id="map-canvas"></div>
-			<style>
-				#map-list{
-					height: 35vh;
-					
-					
-					position: relative;
-					z-index: 500;
-				}
 
-				.garage-sale-entry{
-					padding: 20px;
-					border-bottom: 1px solid #ddd;
-				}
-				@media (max-width: 768px){
-					body{
-						overflow-x: hidden;
-					}
-					#map-list{
-						--n: 1;
-						width: 100%;
-						width: calc(var(--n)*110%);
-						display: flex;
-						align-items: center;
-						height: 45vh;
-
-						transform: translate(calc(var(--i, 0)/var(--n)*-100%));
-					}
-
-					.garage-sale-entry{
-						width: 100%;
-						width: calc(110%/var(--n));
-						user-select: none;
-						pointer-events: none;
-					}
-						
-				}
-					}
-			</style>
 			<div id="map-list">
 				<div class="col-md-12 garage-sale-entry row">
 					<h4>351 Jespersen Ave</h4>

@@ -18,11 +18,11 @@
     	}
 		 *{margin: 0; padding: 0;} 
 		 i{font-size: 120%;}
-	 		 #map-panel { width: 1224px; height: 792px; margin: 15px 5px 0 5px; position: relative; overflow: hidden;}
-	   		 #map-canvas { width: 100%; height: 30vh; }
+ 		 #map-panel { width: 1224px; height: 792px; margin: 15px 5px 0 5px; position: relative; overflow: hidden;}
+   		 #map-canvas { width: 100%; height: 30vh; }
 
 	   		#map-list{
-	   			height: 35vh;
+	   			max-height: 35vh;
 	   			
 	   			
 	   			position: relative;
@@ -31,7 +31,30 @@
 
 	   		.garage-sale-entry{
 	   			padding: 20px;
-	   			border-bottom: 1px solid #ddd;
+	   			
+	   		}
+
+	   		.garage-sale-entry__number{
+	   			text-align: center;
+	   			font-size: 24px;
+	   			font-weight: bold;
+	   		}
+
+	   		.garage-sale-entry__number-icon{
+	   			width: 18px;
+	   			height: 32px;
+	   			display: block;
+	   			position: absolute;
+	   			top: 0;
+	   			left: 0;
+	   			transform: translateX(49%);
+	   			opacity: .10;
+	   			font-size: 46px;
+	   		}
+
+	   		.garage-sale-entry__address{
+	   			font-size: 1.5em;
+	   			font-weight: 500;
 	   		}
 	   		@media (max-width: 768px){
 	   			body{
@@ -48,6 +71,7 @@
 	   				width: calc(var(--n)*100%);
 	   				display: flex;
 	   				align-items: center;
+	   				overflow-y: hidden;
 	   				height: 50vh;
 	   				margin-top: 30px;
 
@@ -205,91 +229,75 @@
 </head>
 <body>
 		<div class="col-md-9 col-md-offset-3 row article">
-			
+			<h1>Garage sales</h1>
 			<div id="map-canvas"></div>
 
 			<div id="map-list">
-				<div class="col-md-12 garage-sale-entry row">
-					<h4>351 Jespersen Ave</h4>
-					<div class="row">
-						<div class="col-md-5">
-							<ul class="list-unstyled">
-								<li></li>
-								<li><strong>Friday, August 30:</strong> 6 p.m. - 9 p.m.</li>
-								<li><strong>Saturday, August 30:</strong> 12 p.m. - 9 p.m.</li>
-								<li><strong>Sunday, August 30:</strong> 6 p.m. - 9 p.m.</li>
-								<li><strong>Monday, August 30:</strong> 6 p.m. - 9 p.m.</li>
-							</ul>	
+					<div class="col-md-4 garage-sale-entry">
+						<div class="col-xs-2">
+							<span class="garage-sale-entry__number">1</span>
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
 						</div>
 
-						<div class="col-md-6">
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>	
-						</div>
+						<div class="col-md-11 col-xs-10">
+							<span class="garage-sale-entry__address">351 Jespersen Ave</span>
+
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+						</div>	
 					</div>
-					
-				</div>
+						
 
-				<div class="col-md-12 garage-sale-entry row">
-					<h4>351 Jespersen Ave</h4>
-					<div class="row">
-						<div class="col-md-5">
-							<ul class="list-unstyled">
-								<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
-								<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
-							</ul>	
+										<div class="col-md-4 garage-sale-entry">
+						<div class="col-xs-2">
+							<span class="garage-sale-entry__number">26</span>
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
 						</div>
 
-						<div class="col-md-6">
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>	
-						</div>
+						<div class="col-md-11 col-xs-10">
+							<span class="garage-sale-entry__address">351 Jespersen Ave</span>
+
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+						</div>	
 					</div>
-					
-				</div>
 
 
-
-				<div class="col-md-12 garage-sale-entry row">
-					<h4>6 Kenton Way</h4>
-					<div class="row">
-						<div class="col-md-5">
-							<ul class="list-unstyled">
-								<li></li>
-								<li><strong>Friday, August 30:</strong> 6 p.m. - 9 p.m.</li>
-								<li><strong>Saturday, August 30:</strong> 12 p.m. - 9 p.m.</li>
-								<li><strong>Sunday, August 30:</strong> 6 p.m. - 9 p.m.</li>
-								<li><strong>Monday, August 30:</strong> 6 p.m. - 9 p.m.</li>
-							</ul>	
+					<div class="col-md-4 garage-sale-entry">
+						<div class="col-xs-2">
+							<span class="garage-sale-entry__number">1</span>
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
 						</div>
 
-						<div class="col-md-6">
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>	
-						</div>
+						<div class="col-md-11 col-xs-10">
+							<span class="garage-sale-entry__address">351 Jespersen Ave</span>
+
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+						</div>	
 					</div>
-					
-				</div>
 
-				<div class="col-md-12 garage-sale-entry row">
-					<h4>14 Guenette Crescent</h4>
-					<div class="row">
-						<div class="col-md-5">
-							<ul class="list-unstyled">
-								<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
-								<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
-							</ul>	
-						</div>
 
-						<div class="col-md-6">
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>	
-						</div>
-					</div>
-					
-				</div>
+
+			</div>
 
 
 
@@ -379,6 +387,7 @@
 
 				_C.addEventListener('mousedown', lock, false);
 				_C.addEventListener('touchstart', lock, false);
+				_C.addEventListener('click', lock, false);
 
 				_C.addEventListener('mousemove', drag, false);
 				_C.addEventListener('touchmove', drag, false);

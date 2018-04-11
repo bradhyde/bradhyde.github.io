@@ -19,10 +19,12 @@
 		 *{margin: 0; padding: 0;} 
 		 i{font-size: 120%;}
  		 #map-panel { width: 1224px; height: 792px; margin: 15px 5px 0 5px; position: relative; overflow: hidden;}
-   		 #map-canvas { width: 100%; height: 30vh; }
-
+   		 #map-canvas { width: 100%; height: 45vh; }
+			.map-list-container{
+				background-color: #F2F3F7;
+				padding: 15px;
+			}
 	   		#map-list{
-	   			
 	   			
 	   			
 	   			position: relative;
@@ -30,7 +32,9 @@
 	   		}
 
 	   		.garage-sale-entry{
-	   			padding: 20px;
+	   			padding: 20px 20px 20px 40px;
+	   			background-color: #ffffff;
+	   			border-bottom: 2px solid #F2F3F7;
 	   			
 	   		}
 
@@ -44,8 +48,9 @@
 	   		.garage-sale-entry__number-icon{
 	   			position: absolute;
 	   			top: 5px;
-	   			left: -25px;
+	   			left: -15px;
 	   			opacity: .15;
+	   			font-size: 26px;
 	   		}
 
 	   		.garage-sale-entry__address{
@@ -55,35 +60,41 @@
 	   		@media (max-width: 768px){
 	   			body{
 	   				overflow-x: hidden;
+	   				font-size: 12px;
 	   			}
 
 	   			.article{
 					overflow-x: hidden;
 	   			}
-
+				#map-canvas{
+					height: 40vh;
+				}
 	   			#map-list{
 	   				--n: 1;
 	   				width: 100%;
-	   				width: calc(var(--n)*100%);
+	   				width: calc(var(--n)*111%);
 	   				display: flex;
 	   				align-items: center;
 	   				overflow-y: hidden;
-	   				max-height: 40vh;
-	   				margin-top: 30px;
-
+	   				max-height: 43vh;
 	   				transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 	   			}
 
 	   			.garage-sale-entry{
 	   				width: 100%;
-	   				width: calc(110%/var(--n));
+	   				width: calc(100%/var(--n));
 	   				user-select: none;
 	   				pointer-events: none;
-	   				
+	   				max-height: 45vh;
+	   				padding: 10px;
+	   				margin-right: 30px;
 	   			}
-	   				
+
+	   			.garage-sale-entry__number-icon{
+	   				display: none;
+	   			}	
 	   		}
-	   			} 
+	   		
     </style>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrh3E6beCX6O4Z1ZxFc9Ln2fUZir3vC0"></script>
@@ -158,7 +169,7 @@
 						];
 						var mapOptions = {
 							center: mapCenter,
-							zoom: 12,
+							zoom: 13,
 							mapTypeControl: false,
 							panControl: true,
 							zoomControl: false,
@@ -228,90 +239,90 @@
 		<div class="col-md-9 col-md-offset-3 row article">
 			<h1>Garage sales</h1>
 			<div id="map-canvas"></div>
+			<div class="map-list-container">
+				<div id="map-list">
 
-			<div id="map-list">
-					<div class="col-md-12 garage-sale-entry">
-						<div class="col-xs-12">
-						<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-							<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+						<div class="col-md-12 garage-sale-entry">
+							<div class="col-xs-12">
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+							</div>
+						
+							<div class="col-md-12 col-xs-12">
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+							</div>	
+							<div class="clearfix"></div>
 						</div>
-		
-						<div class="col-md-12 col-xs-12">
-							<ul class="list-unstyled">
-								<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
-								<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
-							</ul>	
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
-						</div>	
-					</div>
 
-					<div class="col-md-12 garage-sale-entry">
-						<div class="col-xs-12">
-						<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-							<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+						<div class="col-md-12 garage-sale-entry">
+							<div class="col-xs-12">
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+							</div>
+						
+							<div class="col-md-12 col-xs-12">
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+							</div>	
+							<div class="clearfix"></div>
 						</div>
-					
-						<div class="col-md-12 col-xs-12">
-							<ul class="list-unstyled">
-								<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
-								<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
-							</ul>	
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
-						</div>	
-					</div>
 
-					<div class="col-md-12 garage-sale-entry">
-						<div class="col-xs-12">
-						<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-							<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+						<div class="col-md-12 garage-sale-entry">
+							<div class="col-xs-12">
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+							</div>
+						
+							<div class="col-md-12 col-xs-12">
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+							</div>
+							<div class="clearfix"></div>	
 						</div>
-					
-						<div class="col-md-12 col-xs-12">
-							<ul class="list-unstyled">
-								<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
-								<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
-							</ul>	
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
-						</div>	
-					</div>
 
-					<div class="col-md-12 garage-sale-entry">
-						<div class="col-xs-12">
-						<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-							<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
-						</div>
-					
-						<div class="col-md-12 col-xs-12">
-							<ul class="list-unstyled">
-								<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
-								<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
-								<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
-							</ul>	
-							<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
-						</div>	
-					</div>						
+						<div class="col-md-12 garage-sale-entry">
+							<div class="col-xs-12">
+							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+							</div>
+						
+							<div class="col-md-12 col-xs-12">
+								<ul class="list-unstyled">
+									<li>Thursday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Friday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Saturday, August 30: 12 p.m. - 9 p.m.</li>
+									<li>Sunday, August 30: 6 p.m. - 9 p.m.</li>
+									<li>Monday, August 30: 6 p.m. - 9 p.m.</li>
+								</ul>	
+								<p>Antiques / Collectibles, Appliances, Baby Items, Electronics, Furniture, Kid’s Clothing, Men’s / Ladies’ Clothing, Misc. Household Items, Other, Sports Equipment, Tools, Toys</p>
+							</div>
+							<div class="clearfix"></div>	
+						</div>									
 
 
+				</div>
 			</div>
-
-
-
-			</div>
-
-
-
-
+		</div>
+		<div class="clearfix"></div>
 	</div>
 		
 			<script>

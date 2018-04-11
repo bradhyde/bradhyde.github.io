@@ -15,6 +15,7 @@
     		  font-size: 16px;
     		  font-weight: 300;
     		  line-height: 1.5;
+		  overflow-x:hidden;
     	}
 		 *{margin: 0; padding: 0;} 
 		 i{font-size: 120%;}

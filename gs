@@ -88,6 +88,7 @@
 	   				max-height: 45vh;
 	   				padding: 10px;
 	   				margin-right: 30px;
+	   				box-shadow: 0 4px 6px 0 hsla(0,0%,0%,0.2);
 	   			}
 
 	   			.garage-sale-entry__number-icon{

@@ -265,7 +265,7 @@
 						<div class="col-md-12 garage-sale-entry">
 							<div class="col-xs-12">
 							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
+								<span class="garage-sale-entry__number">2.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
 							</div>
 						
 							<div class="col-md-12 col-xs-12">

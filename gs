@@ -205,7 +205,7 @@
 </head>
 <body>
 		<div class="col-md-9 col-md-offset-3 row article">
-			<h1>Garage sales</h1>
+			
 			<div id="map-canvas"></div>
 
 			<div id="map-list">

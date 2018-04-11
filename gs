@@ -15,12 +15,11 @@
     		  font-size: 16px;
     		  font-weight: 300;
     		  line-height: 1.5;
-		  overflow-x:hidden;
     	}
 		 *{margin: 0; padding: 0;} 
 		 i{font-size: 120%;}
 	 		 #map-panel { width: 1224px; height: 792px; margin: 15px 5px 0 5px; position: relative; overflow: hidden;}
-	   		 #map-canvas { width: 100%; height: 40vh; }
+	   		 #map-canvas { width: 100%; height: 30vh; }
 
 	   		#map-list{
 	   			height: 35vh;
@@ -36,17 +35,22 @@
 	   		}
 	   		@media (max-width: 768px){
 	   			body{
-					width: 100%;
 	   				overflow-x: hidden;
 	   			}
+
+	   			.article{
+					overflow-x: hidden;
+	   			}
+
 	   			#map-list{
 	   				--n: 1;
 	   				width: 100%;
-	   				width: calc(var(--n)*110%);
+	   				width: calc(var(--n)*100%);
 	   				display: flex;
 	   				align-items: center;
-	   				height: 45vh;
-					overflow-x: hidden;
+	   				height: 50vh;
+	   				margin-top: 30px;
+
 	   				transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 	   			}
 
@@ -55,6 +59,7 @@
 	   				width: calc(110%/var(--n));
 	   				user-select: none;
 	   				pointer-events: none;
+	   				padding: 30px;
 	   			}
 	   				
 	   		}
@@ -199,7 +204,7 @@
 	</script>
 </head>
 <body>
-		<div class="col-md-9 col-md-offset-3 row">
+		<div class="col-md-9 col-md-offset-3 row article">
 			<h1>Garage sales</h1>
 			<div id="map-canvas"></div>
 

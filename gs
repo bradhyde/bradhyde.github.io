@@ -45,7 +45,7 @@
 	   				display: flex;
 	   				align-items: center;
 	   				height: 45vh;
-
+					overflow-x: hidden;
 	   				transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 	   			}
 

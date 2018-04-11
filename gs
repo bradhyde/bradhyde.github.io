@@ -265,7 +265,7 @@
 						<div class="col-md-12 garage-sale-entry">
 							<div class="col-xs-12">
 							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-								<span class="garage-sale-entry__number">2.</span> <span class="garage-sale-entry__address">6 Kenton Way</span>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
 							</div>
 						
 							<div class="col-md-12 col-xs-12">
@@ -284,7 +284,7 @@
 						<div class="col-md-12 garage-sale-entry">
 							<div class="col-xs-12">
 							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-								<span class="garage-sale-entry__number">3.</span> <span class="garage-sale-entry__address">14 Guenette Cres.</span>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
 							</div>
 						
 							<div class="col-md-12 col-xs-12">
@@ -303,7 +303,7 @@
 						<div class="col-md-12 garage-sale-entry">
 							<div class="col-xs-12">
 							<i class="fa fa-map-marker garage-sale-entry__number-icon fa-2x"></i>
-								<span class="garage-sale-entry__number">4.</span> <span class="garage-sale-entry__address">9 Tri Leisure Way</span>
+								<span class="garage-sale-entry__number">1.</span> <span class="garage-sale-entry__address">351 Lakewood Cove N</span>
 							</div>
 						
 							<div class="col-md-12 col-xs-12">
@@ -412,11 +412,12 @@
 				_C.addEventListener('mousedown', lock, false);
 				_C.addEventListener('touchstart', lock, false);
 				_C.addEventListener('click', lock, false);
+				_C.addEventListener('focus', lock, false);
 
 				_C.addEventListener('mousemove', drag, false);
 				_C.addEventListener('touchmove', drag, false);
 
-				_C.addEventListener('mouseup', move, false);
+				_C.addEventListener('mouseup', lock, false);
 				_C.addEventListener('touchend', move, false);
 			</script>
 	

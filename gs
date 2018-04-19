@@ -29,17 +29,18 @@
       .garage-sale-entry{
        /* background-color: #e0e6ea;
         */
+        position: relative;
         padding: 20px 0 15px 0;
         border-bottom: 1px solid #e0e6ea;
       }
       .garage-sale-list{
-        max-height: 100vh;
+        max-height: 94vh;
         overflow-y:scroll;
       }
 
       .sidebar {
           position: fixed;
-          top: 0;
+          top: 40px;
           bottom: 0;
           left: 0;
           z-index: 100;
@@ -51,27 +52,86 @@
         opacity: .5;
         cursor: pointer;
       }
+      .garage-sale-entry__num{
+        position: absolute;
+        top: 22px;
+        left: -30px;
+        z-index: 3;
+      }
+      .garage-sale-entry::before{
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-color: #e0dada;
+        border-radius: 50%;
+        position: absolute;
+        top: 21px;
+        left: -38px;
+        z-index: 2;
+      }
+      @media(max-width: 768px){
+        #map{
+          height: 65vh;
+        }
+        .garage-sale-list{
+          max-height: 38vh;
+          overflow-y:scroll;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 15px;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+      }
+
+      @media(max-width: 480px){
+        .garage-sale-entry{
+          margin-left: 40px;
+        } 
+      }
     </style>
   </head>
   <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">This Week's Garage Sales</a>
+          
+          <div class="nav-item px-3">
+            
+              <a class="nav-link" href="#"><i class="fa fa-arrow-left"></i> Back</a>
+            
+          </div>
+          <div class="nav-item px-3">
+            
+              <a class="nav-link" href="#"><i class="fa fa-arrow-left"></i> Back</a>
+            
+          </div>
+        </nav>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 bg-light sidebar garage-sale-list">
           <div class="sidebar-sticky">
-            <div class="garage-sale-entry">
-              <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
+            <div class="garage-sale-entry offset-md-2 offset-sm-1 offset-xs-2">
+              <span class="garage-sale-entry__num h6">1.</span>
+              <span class="h6">   6 Kenton Way in Kenton <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
               <ul class="list-unstyled small">
-                <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Friday, September 3</li>
-                <li>Saturday, September 3</li>
-                <li>Sunday, September 3</li>
+                <li>Thurs, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
+                <li>Fri, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
+                <li>Sat, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
+                <li>Sun, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
               </ul>
               <p class="small">
                 antiques/collectibles, toys, clothing, tools, appliances
               </p>
             </div>  
 
-            <div class="garage-sale-entry">
+            <div class="garage-sale-entry offset-md-2 offset-sm-1">
+              <span class="garage-sale-entry__num h6">2.</span>
               <span class="h6">   10 Hazelwood Lane <i class="fa fa-location-arrow locate-on-map-button" data-lat="53.5610799" data-lng="-113.8877028" aria-hidden="true"></i></span>
               <ul class="list-unstyled small">
                 <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
@@ -84,7 +144,8 @@
               </p>
             </div>
 
-            <div class="garage-sale-entry">
+            <div class="garage-sale-entry offset-md-2 offset-sm-1">
+              <span class="garage-sale-entry__num h6">3.</span>
               <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
               <ul class="list-unstyled small">
                 <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
@@ -97,7 +158,8 @@
               </p>
             </div>
 
-            <div class="garage-sale-entry">
+            <div class="garage-sale-entry offset-md-2 offset-sm-1">
+              <span class="garage-sale-entry__num h6">4.</span>
               <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
               <ul class="list-unstyled small">
                 <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
@@ -110,7 +172,8 @@
               </p>
             </div>
 
-            <div class="garage-sale-entry">
+            <div class="garage-sale-entry offset-md-2 offset-sm-1">
+              <span class="garage-sale-entry__num h6">5.</span>
               <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
               <ul class="list-unstyled small">
                 <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
@@ -123,7 +186,8 @@
               </p>
             </div>
 
-            <div class="garage-sale-entry">
+            <div class="garage-sale-entry offset-md-2 offset-sm-1">
+              <span class="garage-sale-entry__num h6">6.</span>
               <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
               <ul class="list-unstyled small">
                 <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
@@ -138,7 +202,7 @@
           </div>
           
         </div>
-        <div class="col-md-9 offset-md-3 no-gutters row">
+        <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div id="map"></div>
         </div>
         

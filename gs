@@ -48,7 +48,7 @@
       <i class="fa fa-spinner fa-pulse fa-3x fa-fw loading-icon"></i>
     </div>
     <nav class="navbar fixed-top navbar-expand-lg gs-navbar">
-          <span class="navbar-brand col-sm-3 col-md-2 mr-0"><img class="navbar-logo" src="https://www.sprucegrove.org/media/2644/cosg_icon.svg">Spruce Grove Garage Sales @gsDates</span>
+          <span class="navbar-brand col-sm-3 col-md-2 mr-0"><img class="navbar-logo" src="https://www.sprucegrove.org/media/2644/cosg_icon.svg">Spruce Grove Garage Sales May 10 - 13, 2018</span>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
              <ul class="navbar-nav">

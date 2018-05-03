@@ -192,7 +192,7 @@ display: none;
     height: 70vh;
   }
   .garage-sale-list{
-    max-height: 30vh;
+    max-height: 25vh;
     overflow-y:scroll;
   }	
 }

@@ -1,385 +1,98 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Marker Clustering</title>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15477367-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-15477367-2');
+</script>
+
+    <title>This Week's Garage Sales - City of Spruce Grove</title>
     <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<script src="https://use.typekit.net/enl4roo.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        width: 100%;
-        height: 100vh;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .garage-sale-entry{
-       /* background-color: #e0e6ea;
-        */
-        position: relative;
-        padding: 20px 0 15px 0;
-        border-bottom: 1px solid #e0e6ea;
-      }
-      .garage-sale-list{
-        max-height: 94vh;
-        overflow-y:scroll;
-      }
+    <link rel="stylesheet" href="~/css/gs_list.css">
+    <link rel="stylesheet" href="~/css/gs_list_print.css">
 
-      .sidebar {
-          position: fixed;
-          top: 40px;
-          bottom: 0;
-          left: 0;
-          z-index: 100;
-          padding: 15px;
-          box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-      }
-      .locate-on-map-button{
-        margin-left: 15px;
-        opacity: .5;
-        cursor: pointer;
-      }
-      .garage-sale-entry__num{
-        position: absolute;
-        top: 22px;
-        left: -30px;
-        z-index: 3;
-      }
-      .garage-sale-entry::before{
-        content: '';
-        display: block;
-        width: 25px;
-        height: 25px;
-        background-color: #e0dada;
-        border-radius: 50%;
-        position: absolute;
-        top: 21px;
-        left: -38px;
-        z-index: 2;
-      }
-      @media(max-width: 768px){
-        #map{
-          height: 65vh;
-        }
-        .garage-sale-list{
-          max-height: 38vh;
-          overflow-y:scroll;
-        }
-
-        .sidebar {
-            position: fixed;
-            top: auto;
-            bottom: 0;
-            left: 0;
-            z-index: 100;
-            padding: 15px;
-            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-        }
-      }
-
-      @media(max-width: 480px){
-        .garage-sale-entry{
-          margin-left: 40px;
-        } 
-      }
-    </style>
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="qlSRGW830_CPbzIUcjL_mYXlJOoj0GC7ofrSuldXzac" />
+    
   </head>
   <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">This Week's Garage Sales</a>
-          
-          <div class="nav-item px-3">
-            
-              <a class="nav-link" href="#"><i class="fa fa-arrow-left"></i> Back</a>
-            
-          </div>
-          <div class="nav-item px-3">
-            
-              <a class="nav-link" href="#"><i class="fa fa-arrow-left"></i> Back</a>
-            
-          </div>
+     <div class="overlay">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw loading-icon"></i>
+    </div>
+    <nav class="navbar fixed-top navbar-expand-lg gs-navbar">
+          <span class="navbar-brand col-sm-3 col-md-2 mr-0"><img class="navbar-logo" src="https://www.sprucegrove.org/media/2644/cosg_icon.svg">Spruce Grove Garage Sales @gsDates</span>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link gs-back-button" href="#"><i class="fa fa-fw fa-arrow-left"></i> Back</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link xs-hidden gs-list-print__btn" href="#" onclick="window.print()"><i class="fa fa-fw fa-print"></i> Print</a>
+               </li>
+             </ul>
+           </div>
         </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 bg-light sidebar garage-sale-list">
+        <div class="col-lg-3 col-md-12 sidebar garage-sale-list">
           <div class="sidebar-sticky">
-            <div class="garage-sale-entry offset-md-2 offset-sm-1 offset-xs-2">
-              <span class="garage-sale-entry__num h6">1.</span>
-              <span class="h6">   6 Kenton Way in Kenton <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
-              <ul class="list-unstyled small">
-                <li>Thurs, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Fri, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Sat, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Sun, Sept. 3: 12:00 p.m.-9:00 p.m.</li>
-              </ul>
-              <p class="small">
-                antiques/collectibles, toys, clothing, tools, appliances
-              </p>
-            </div>  
+            <h6 class="offset-sm-1 font-weight-bold">Addresses</h6>
+            <div id="gs-list"> </div>
 
-            <div class="garage-sale-entry offset-md-2 offset-sm-1">
-              <span class="garage-sale-entry__num h6">2.</span>
-              <span class="h6">   10 Hazelwood Lane <i class="fa fa-location-arrow locate-on-map-button" data-lat="53.5610799" data-lng="-113.8877028" aria-hidden="true"></i></span>
-              <ul class="list-unstyled small">
-                <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Friday, September 3</li>
-                <li>Saturday, September 3</li>
-                <li>Sunday, September 3</li>
-              </ul>
-              <p class="small">
-                antiques/collectibles, toys, clothing, tools, appliances
-              </p>
-            </div>
-
-            <div class="garage-sale-entry offset-md-2 offset-sm-1">
-              <span class="garage-sale-entry__num h6">3.</span>
-              <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
-              <ul class="list-unstyled small">
-                <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Friday, September 3</li>
-                <li>Saturday, September 3</li>
-                <li>Sunday, September 3</li>
-              </ul>
-              <p class="small">
-                antiques/collectibles, toys, clothing, tools, appliances
-              </p>
-            </div>
-
-            <div class="garage-sale-entry offset-md-2 offset-sm-1">
-              <span class="garage-sale-entry__num h6">4.</span>
-              <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
-              <ul class="list-unstyled small">
-                <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Friday, September 3</li>
-                <li>Saturday, September 3</li>
-                <li>Sunday, September 3</li>
-              </ul>
-              <p class="small">
-                antiques/collectibles, toys, clothing, tools, appliances
-              </p>
-            </div>
-
-            <div class="garage-sale-entry offset-md-2 offset-sm-1">
-              <span class="garage-sale-entry__num h6">5.</span>
-              <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
-              <ul class="list-unstyled small">
-                <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Friday, September 3</li>
-                <li>Saturday, September 3</li>
-                <li>Sunday, September 3</li>
-              </ul>
-              <p class="small">
-                antiques/collectibles, toys, clothing, tools, appliances
-              </p>
-            </div>
-
-            <div class="garage-sale-entry offset-md-2 offset-sm-1">
-              <span class="garage-sale-entry__num h6">6.</span>
-              <span class="h6">   6 Kenton Way <i class="fa fa-location-arrow locate-on-map-button" aria-hidden="true"></i></span>
-              <ul class="list-unstyled small">
-                <li>Thursday, September 3: 12:00 p.m.-9:00 p.m.</li>
-                <li>Friday, September 3</li>
-                <li>Saturday, September 3</li>
-                <li>Sunday, September 3</li>
-              </ul>
-              <p class="small">
-                antiques/collectibles, toys, clothing, tools, appliances
-              </p>
-            </div>
           </div>
           
         </div>
-        <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="col-lg-9 col-md-12 ml-sm-auto no-gutter px-0">
+          <div class="reset-map"><i class="fa fa-crosshairs" aria-hidden="true"></i></div>
           <div id="map"></div>
         </div>
+        @{
+            var gsMap = Model.Content.GetPropertyValue<IPublishedContent>("gsMap");
+            
+            <img src="@gsMap.Url" class="printable-map" alt="">
+        }
         
       </div>
       
     </div>
-    
+    <footer><span class="h4">Put your sale on the map! www.sprucegrove.org/garagesales</span></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
-    <script>
-      var labelnum = 1;
-      var coordArray = [];
-
-
-      function initMap() {
-        $.getJSON('https://spreadsheets.google.com/feeds/list/1wlhi4Oe2yLVxSzKAojUP9bWiHEgOayptGTkVlq-b6aU/od6/public/values?alt=json', function(data) {
-        
-               
-                for (var i = 0; i < data.feed.entry.length; i++) {
-
-                    if(labelnum < 10){
-                      var icon = 'data:image/svg+xml;utf-8, \
-                               <svg height="35" width="35" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"> \
-                                 <circle cx="33%" cy="43%" r="15" style="stroke:#000000; stroke-width: 4; fill:#ffffff"/> \
-                                 <text x="25%" y="55%" fill="black" font-family = "sans-serif" font-weight = "bold" font-size = "14">' + labelnum + '</text> \
-                               </svg>'
-                    }
-                    else{
-                      var icon = 'data:image/svg+xml;utf-8, \
-                               <svg height="50" width="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"> \
-                                 <circle cx="40%" cy="43%" r="15" style="stroke:#000000; stroke-width: 4; fill:#ffffff"/> \
-                                 <text x="55%" y="55%" fill="black" font-family = "sans-serif" font-weight = "bold" font-size = "14">' + labelnum + '</text> \
-                               </svg>'
-                    }
-                    
-        
-                  var latLong = data.feed.entry[i].gsx$coordinates.$t;
-                  var coordinates = latLong.split(',');
-                  var latCoord = Number(coordinates[0]);
-                  var lngCoord = Number(coordinates[1]);
-                  var lol = {};
-                  var lol = {lat: latCoord, lng: lngCoord};
-
-
-                  console.log(labelnum);
-                  console.log(latCoord);
-                  console.log(lngCoord);
-
-
-                  var marker = new google.maps.Marker({
-                     position: lol,
-                     icon: icon,
-                     // icon: 'icons/' + labelnum + '.svg',
-                     map: map
-                   });
-
-                  labelnum++;
-                                  
-                                  
-
-              
-                }
-               
-                return coordArray;
-        });
-
-
-        var mapCenter = new google.maps.LatLng(53.555182, -113.910255);
-
-        var styles = [
-                    {
-                    "featureType": "landscape",
-                    "stylers": [
-                      { "color": "#ffffff" }
-                    ]
-                    },{
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [
-                      { "color": "#3598db" }
-                    ]
-                    },{
-                    "featureType": "road.highway",
-                    "elementType": "labels.text",
-                    "stylers": [
-                      { "color": "#000000" },
-                      { "weight": 1 }
-                    ]
-                    },{
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                      { "color": "#ffffff" },
-                      { "weight": 6.8 }
-                    ]
-                    },{
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [
-                      { "color": "#3598db" }
-                    ]
-                    },{
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                      { "weight": 8 },
-                      { "color": "#ffffff" }
-                    ]
-                    },{
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [
-                      { "visibility": "simplified" },
-                      { "weight": 1 },
-                      { "color": "#7e8c8d" }
-                    ]
-                    },{
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [
-                      { "visibility": "off" }
-                    ]
-                    },{
-                    "featureType": "landscape.man_made",
-                    "stylers": [
-                      { "visibility": "on" }
-                    ]
-                    }
-                  ];
-                  var mapOptions = {
-                    center: mapCenter,
-                    zoom: 13,
-                    mapTypeControl: false,
-                    panControl: true,
-                    zoomControl: true,
-                    scaleControl: false,
-                    fullscreenControl: false,
-                    streetViewControl: false
-                  };
-
-
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-        map.setOptions({styles: styles});
-
-      function newLocation(newLat,newLng)
-      {
-        map.setCenter({
-          lat : newLat,
-          lng : newLng,
-        });
-
-        map.setZoom(17);
-      }
-
-
-      $('.locate-on-map-button').click(function(){
-          newLocation(parseFloat($(this).attr('data-lat')),parseFloat($(this).attr('data-lng')));
-      });
-
-        // // Add a marker clusterer to manage the markers.
-        // var markerCluster = new MarkerClusterer(map, coordArray,
-        //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
-        // var markerCluster = new MarkerClusterer(map, markers,
-        //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-      }
-      
-
-
-
-    </script>
+    <script src="~/scripts/gs_list.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
             
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGIQKpeigO9TbYkvtAzBwc-5-8PFSyi9k&callback=initMap">
     </script>
+
   </body>
 </html>

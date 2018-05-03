@@ -253,7 +253,7 @@
                   
                   var mapOptions = {
                     center: mapCenter,
-                    zoom: 14,
+                    zoom: mapZoom,
                     mapTypeControl: false,
                     panControl: true,
                     zoomControl: true,

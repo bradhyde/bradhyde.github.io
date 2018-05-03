@@ -185,8 +185,19 @@ display: none;
 }
 
 @media(max-width: 480px){
+  .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 12px;	  
+   }
+.navbar-logo {
+    height: 18px;
+    width: auto;
+    margin-right: 7px;
+}	
   .garage-sale-entry{
-    margin-left: 15px;
+    margin-left: 5px;
   } 
   #map{
     height: 70vh;

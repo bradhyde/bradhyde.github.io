@@ -186,6 +186,13 @@ display: none;
 
 @media(max-width: 480px){
   .garage-sale-entry{
-    margin-left: 40px;
+    margin-left: 15px;
   } 
+  #map{
+    height: 65vh;
+  }
+  .garage-sale-list{
+    max-height: 38vh;
+    overflow-y:scroll;
+  }	
 }

@@ -189,7 +189,7 @@ display: none;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
-    font-size: 12px;	  
+    font-size: 12px !important;	  
    }
 .navbar-logo {
     height: 18px;

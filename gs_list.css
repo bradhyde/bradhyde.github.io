@@ -189,10 +189,10 @@ display: none;
     margin-left: 15px;
   } 
   #map{
-    height: 65vh;
+    height: 70vh;
   }
   .garage-sale-list{
-    max-height: 38vh;
+    max-height: 30vh;
     overflow-y:scroll;
   }	
 }

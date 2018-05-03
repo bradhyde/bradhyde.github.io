@@ -86,7 +86,7 @@
     </div>
     <footer><span class="h4">Put your sale on the map! www.sprucegrove.org/garagesales</span></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="~/scripts/gs_list.js"></script>
+    <script src="gs_list.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
             

@@ -1,0 +1,191 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "proxima-nova",sans-serif;
+}
+
+ .printable-map, .print-header{
+  display: none;
+ }
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+}
+
+.loading-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 6em;
+}
+
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gs-navbar{
+  background-color: #009CDC;
+  border-top: 3px solid #002C3D;
+  color: #ffffff;
+}
+
+.gs-navbar a{
+  color: #ffffff;
+}
+
+
+.gs-navbar a .fa{
+	opacity: .55;
+}
+
+.gs-navbar a.gs-list-print__btn {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    padding: 3px 1.25rem;
+    margin-top: 4px;
+	margin-left: 10px;
+}
+
+.gs-navbar a.gs-list-print__btn .fa{
+    opacity: 1;
+}
+
+.gs-navbar a.gs-list-print__btn:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.gs-navbar a:hover .fa{
+	color: #FFFFFF;
+	opacity: 1;
+}
+
+.navbar-brand {
+    font-weight: 300;
+}
+
+.navbar-logo {
+    height: 35px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.garage-sale-entry{
+ /* background-color: #e0e6ea;
+  */
+  position: relative;
+  padding: 20px 0 15px 0;
+  border-bottom: 1px solid #e0e6ea;
+}
+.garage-sale-list{
+  max-height: 95vh;
+  overflow-y:scroll;
+  background: #ffffff;
+  box-shadow: 3px 0 3px rgba(0,0,0,.25);
+}
+
+.garage-sale-list::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.garage-sale-list::-webkit-scrollbar-thumb {
+    background-color: #b4b7bc; 
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px;
+    box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.2);
+}
+.locate-on-map-button{
+  margin-left: 15px;
+  opacity: .5;
+  cursor: pointer;
+}
+.garage-sale-entry__num{
+  margin-right: 8px;
+}
+
+.garage-sale-entry-nbhd{
+  color: hsl(0, 0%, 45%);
+}
+/*.garage-sale-entry::before{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #e0dada;
+  border-radius: 50%;
+  position: absolute;
+  top: 21px;
+  left: -38px;
+  z-index: 2;
+}*/
+
+.reset-map {
+    position: absolute;
+    z-index: 100;
+    bottom: 85px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 5px;
+	color: #666666;
+	text-align: center;
+    padding: 3px;
+	cursor: pointer;
+}
+
+footer{
+display: none;
+}
+@media(max-width: 992px){
+  #map{
+    height: 65vh;
+  }
+  .garage-sale-list{
+    max-height: 38vh;
+    overflow-y:scroll;
+  }
+
+  .sidebar {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      padding: 15px;
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+}
+
+@media(max-width: 480px){
+  .garage-sale-entry{
+    margin-left: 40px;
+  } 
+}

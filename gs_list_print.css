@@ -1,0 +1,86 @@
+
+@media print {
+   html,body{
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-family: "proxima-nova",sans-serif;
+   }
+	h6.offset-sm-1{
+		margin-left: 0;
+	}
+   .garage-sale-list{
+      min-width: 100%;
+      position: absolute;
+      top: 625px;
+      overflow-y: auto;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      margin-top: 0;
+   }
+   .garage-sale-entry{
+      min-width: 210px;
+      max-width: 210px!important;
+      float: left;
+      border-bottom: none;
+      margin-left: 25px;
+      margin-right: 10px;
+      margin-bottom: 15px;
+      padding: 0;
+   }
+
+   .garage-sale-entry ul{
+      margin-bottom: 0;
+   }
+	
+	.gs-items{
+	  display:none;
+	}
+
+   .locate-on-map-button{
+      display: none;
+   }
+
+	
+   .printable-map{
+    width: 100%;
+    height: 600px;
+    display: block;
+   }
+	
+   #map{
+    display: none;
+   }
+   /*.ml-sm-auto{
+    margin-left: 0!important;
+   }
+   .px-4{
+    padding-left: 0!important;
+    padding-right: 0!important;
+   }*/
+
+  [class*=' col-']{
+    padding-left: 0!important;
+    padding-right: 0!important;
+    max-width: 100%!important;
+  }
+   .garage-sale-entry__num{
+      top: 2px;
+      left: -20px;
+   }
+	
+  .garage-sale-list::after{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size; 20px;
+    font-weight: bold;
+    content: 'Put your garage sale on the map! www.sprucegrove.org/garagesales';
+    text-align: center;
+    clear:both;
+    padding: 5px 0;
+    background-color: #F2F3F7;
+  }
+}
